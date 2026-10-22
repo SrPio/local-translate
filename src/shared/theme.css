@@ -1,0 +1,44 @@
+/* Design tokens. Dark is the default; light applies only when chosen. */
+:root,
+:host {
+  color-scheme: dark;
+  --lt-bg: #16171d;
+  --lt-surface: #1f2029;
+  --lt-surface-2: #2a2b37;
+  --lt-border: #363849;
+  --lt-text: #ececf3;
+  --lt-text-muted: #a3a6b8;
+  --lt-accent: #a5a6ff;
+  --lt-accent-bg: #5b5bd6;
+  --lt-accent-bg-hover: #6a6ae0;
+  --lt-accent-text: #ffffff;
+  --lt-focus: #b4b5ff;
+  --lt-error: #fca5a5;
+  --lt-error-bg: rgba(248, 113, 113, 0.12);
+  --lt-success: #86efac;
+  --lt-info-bg: rgba(165, 166, 255, 0.1);
+  --lt-shadow: 0 12px 32px rgba(0, 0, 0, 0.45), 0 2px 6px rgba(0, 0, 0, 0.3);
+  --lt-radius: 10px;
+  --lt-radius-sm: 7px;
+  --lt-font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+  --lt-bg: #ffffff;
+  --lt-surface: #f5f5f9;
+  --lt-surface-2: #ebebf3;
+  --lt-border: #d5d6e2;
+  --lt-text: #1b1c24;
+  --lt-text-muted: #565a6e;
+  --lt-accent: #4338ca;
+  --lt-accent-bg: #4f46e5;
+  --lt-accent-bg-hover: #4338ca;
+  --lt-accent-text: #ffffff;
+  --lt-focus: #4f46e5;
+  --lt-error: #b91c1c;
+  --lt-error-bg: rgba(185, 28, 28, 0.08);
+  --lt-success: #15803d;
+  --lt-info-bg: rgba(79, 70, 229, 0.08);
+  --lt-shadow: 0 12px 32px rgba(20, 20, 40, 0.18), 0 2px 6px rgba(20, 20, 40, 0.1);
+}

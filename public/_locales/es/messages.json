@@ -1,0 +1,154 @@
+{
+  "extName": {
+    "message": "Local Translate"
+  },
+  "extDescription": {
+    "message": "Traduce texto seleccionado o escrito en tu dispositivo con la Translator API integrada de Chrome."
+  },
+  "sourceLanguage": {
+    "message": "Idioma de origen"
+  },
+  "targetLanguage": {
+    "message": "Idioma de destino"
+  },
+  "detectLanguage": {
+    "message": "Detectar idioma"
+  },
+  "detectedLanguage": {
+    "message": "Detectado: $LANG$",
+    "placeholders": {
+      "lang": {
+        "content": "$1"
+      }
+    }
+  },
+  "featuredLanguages": {
+    "message": "Destacados"
+  },
+  "otherLanguages": {
+    "message": "Otros idiomas"
+  },
+  "swapLanguages": {
+    "message": "Intercambiar idiomas"
+  },
+  "translate": {
+    "message": "Traducir"
+  },
+  "translateShortcut": {
+    "message": "Ctrl+Intro para traducir"
+  },
+  "inputLabel": {
+    "message": "Texto para traducir"
+  },
+  "inputPlaceholder": {
+    "message": "Escribe o pega un texto…"
+  },
+  "resultLabel": {
+    "message": "Traducción"
+  },
+  "charCount": {
+    "message": "$COUNT$ / $MAX$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "max": {
+        "content": "$2"
+      }
+    }
+  },
+  "copy": {
+    "message": "Copiar"
+  },
+  "copyTranslation": {
+    "message": "Copiar traducción"
+  },
+  "copied": {
+    "message": "Copiado"
+  },
+  "copyFailed": {
+    "message": "No se pudo acceder al portapapeles. Selecciona el texto y cópialo manualmente."
+  },
+  "close": {
+    "message": "Cerrar"
+  },
+  "translateSelection": {
+    "message": "Traducir selección"
+  },
+  "floatingTitle": {
+    "message": "Traducción de la selección"
+  },
+  "loadingLanguages": {
+    "message": "Cargando idiomas disponibles…"
+  },
+  "statusChecking": {
+    "message": "Comprobando disponibilidad…"
+  },
+  "statusDownloadable": {
+    "message": "Este par de idiomas necesita que Chrome descargue un modelo una sola vez. Empezará al traducir."
+  },
+  "statusDownloading": {
+    "message": "Chrome está descargando el modelo de idioma… $PCT$%",
+    "placeholders": {
+      "pct": {
+        "content": "$1"
+      }
+    }
+  },
+  "statusPreparing": {
+    "message": "Preparando el modelo de traducción…"
+  },
+  "statusTranslating": {
+    "message": "Traduciendo…"
+  },
+  "statusDone": {
+    "message": "Traducción completada"
+  },
+  "statusUnsupported": {
+    "message": "Este navegador no admite la Translator API integrada de Chrome. Usa una versión reciente de Chrome para escritorio (138 o posterior)."
+  },
+  "statusUnsupportedInPage": {
+    "message": "La traducción no está disponible en esta página. Prueba desde el popup de la extensión."
+  },
+  "statusPairUnavailable": {
+    "message": "Chrome no puede traducir entre estos idiomas. Elige otra combinación."
+  },
+  "statusSameLanguage": {
+    "message": "El texto ya está en el idioma de destino."
+  },
+  "errorDetectFailed": {
+    "message": "No se pudo detectar el idioma. Elige el idioma de origen manualmente."
+  },
+  "errorOffline": {
+    "message": "Parece que no hay conexión. Chrome necesita conexión para descargar este modelo de idioma."
+  },
+  "errorNeedsGesture": {
+    "message": "Pulsa Traducir de nuevo para permitir que Chrome descargue el modelo."
+  },
+  "errorDownload": {
+    "message": "No se pudo descargar el modelo de idioma. Revisa la conexión y el espacio libre en disco e inténtalo de nuevo."
+  },
+  "errorTooLong": {
+    "message": "El texto supera el límite de $MAX$ caracteres. Selecciona o pega un fragmento más corto.",
+    "placeholders": {
+      "max": {
+        "content": "$1"
+      }
+    }
+  },
+  "errorEmpty": {
+    "message": "Escribe algún texto para traducir."
+  },
+  "errorGeneric": {
+    "message": "Algo falló al traducir. Inténtalo de nuevo."
+  },
+  "privacyNote": {
+    "message": "El texto se traduce en tu dispositivo. Chrome puede descargar modelos de IA bajo demanda; tu texto nunca se envía en esa descarga."
+  },
+  "themeToggleToLight": {
+    "message": "Cambiar a tema claro"
+  },
+  "themeToggleToDark": {
+    "message": "Cambiar a tema oscuro"
+  }
+}

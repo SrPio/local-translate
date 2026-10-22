@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Local Translate features</title>
+    <link rel="stylesheet" href="banner.css" />
+    <style>
+      .grid {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        height: 100%;
+        padding: 56px;
+        align-items: stretch;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        padding: 28px 26px;
+        border-radius: 18px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .02));
+        border: 1px solid rgba(255, 255, 255, .1);
+      }
+      .icon {
+        display: grid;
+        place-items: center;
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, #4f46e5, #7c3aed);
+        box-shadow: 0 12px 28px rgba(91, 91, 214, .45);
+      }
+      .icon svg { width: 26px; height: 26px; stroke: #fff; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      h2 { margin: 6px 0 0; font-size: 23px; letter-spacing: -.3px; }
+      p { margin: 0; font-size: 16px; line-height: 1.5; color: #a9abbd; }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z" /><path d="M9 12l2 2 4-4" /></svg></div>
+        <h2>Private by design</h2>
+        <p>Runs on Chrome's built-in Translator API. Your text never leaves the device.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 7V4h3M17 4h3v3M20 17v3h-3M7 20H4v-3" /><path d="M8 10h8M8 14h5" /></svg></div>
+        <h2>Select &amp; translate</h2>
+        <p>Highlight text on any page, click the icon and read the translation in place.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M7 9h.01M11 9h.01M15 9h.01M7 13h10" /></svg></div>
+        <h2>Popup translator</h2>
+        <p>Type or paste anything, swap languages and copy the result in one click.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" /></svg></div>
+        <h2>Dark by default</h2>
+        <p>Easy on the eyes, keyboard friendly and accessible, with an optional light theme.</p>
+      </div>
+    </div>
+    <script>
+      window.addEventListener('load', () => (document.documentElement.dataset.ready = 'true'));
+    </script>
+  </body>
+</html>

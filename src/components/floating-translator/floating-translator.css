@@ -1,0 +1,137 @@
+/* Lives inside a closed shadow root; page styles cannot reach it. */
+:host {
+  all: initial;
+}
+
+.lt-root {
+  font-family: var(--lt-font);
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--lt-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Re-resolves the tokens for the chosen theme. */
+.lt-scope {
+  color: var(--lt-text);
+}
+
+.lt-root *,
+.lt-root *::before,
+.lt-root *::after {
+  box-sizing: border-box;
+}
+
+.lt-trigger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+  background: var(--lt-accent-bg);
+  color: var(--lt-accent-text);
+  box-shadow: var(--lt-shadow);
+  cursor: pointer;
+  pointer-events: auto;
+  animation: lt-pop 120ms ease-out;
+  transition: background-color 120ms ease, box-shadow 120ms ease;
+}
+
+.lt-trigger:hover {
+  background: var(--lt-accent-bg-hover);
+}
+
+.lt-trigger:active {
+  filter: brightness(0.92);
+}
+
+.lt-trigger:focus-visible {
+  outline: 2px solid var(--lt-focus);
+  outline-offset: 2px;
+}
+
+.lt-floating {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 368px;
+  max-width: calc(100vw - 16px);
+  max-height: 320px;
+  display: flex;
+  flex-direction: column;
+  background: var(--lt-bg);
+  border: 1px solid var(--lt-border);
+  border-radius: var(--lt-radius);
+  box-shadow: var(--lt-shadow);
+  pointer-events: auto;
+  overflow: hidden;
+  animation: lt-fade 120ms ease-out;
+}
+
+/* The container only receives focus programmatically; controls show rings. */
+.lt-floating:focus {
+  outline: none;
+}
+
+.lt-floating-detected {
+  margin: 0;
+  font-size: 11.5px;
+  color: var(--lt-text-muted);
+}
+
+.lt-floating-header {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  padding: 10px 10px 8px 12px;
+  border-bottom: 1px solid var(--lt-border);
+  background: var(--lt-surface);
+}
+
+.lt-floating-header .lt-select {
+  font-size: 12.5px;
+  min-height: 30px;
+}
+
+.lt-floating-close {
+  margin-left: 2px;
+}
+
+.lt-floating-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  overflow-y: auto;
+  min-height: 48px;
+}
+
+.lt-floating-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 4px 8px 8px;
+}
+
+@keyframes lt-pop {
+  from {
+    opacity: 0;
+    scale: 0.85;
+  }
+}
+
+@keyframes lt-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lt-trigger,
+  .lt-floating {
+    animation: none;
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "extName": {
+    "message": "Local Translate"
+  },
+  "extDescription": {
+    "message": "Translate selected text and typed text on-device with Chrome's built-in Translator API."
+  },
+  "sourceLanguage": {
+    "message": "Source language"
+  },
+  "targetLanguage": {
+    "message": "Target language"
+  },
+  "detectLanguage": {
+    "message": "Detect language"
+  },
+  "detectedLanguage": {
+    "message": "Detected: $LANG$",
+    "placeholders": {
+      "lang": {
+        "content": "$1"
+      }
+    }
+  },
+  "featuredLanguages": {
+    "message": "Featured"
+  },
+  "otherLanguages": {
+    "message": "Other languages"
+  },
+  "swapLanguages": {
+    "message": "Swap languages"
+  },
+  "translate": {
+    "message": "Translate"
+  },
+  "translateShortcut": {
+    "message": "Ctrl+Enter to translate"
+  },
+  "inputLabel": {
+    "message": "Text to translate"
+  },
+  "inputPlaceholder": {
+    "message": "Type or paste text…"
+  },
+  "resultLabel": {
+    "message": "Translation"
+  },
+  "charCount": {
+    "message": "$COUNT$ / $MAX$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "max": {
+        "content": "$2"
+      }
+    }
+  },
+  "copy": {
+    "message": "Copy"
+  },
+  "copyTranslation": {
+    "message": "Copy translation"
+  },
+  "copied": {
+    "message": "Copied"
+  },
+  "copyFailed": {
+    "message": "Could not access the clipboard. Select the text and copy it manually."
+  },
+  "close": {
+    "message": "Close"
+  },
+  "translateSelection": {
+    "message": "Translate selection"
+  },
+  "floatingTitle": {
+    "message": "Translation of the selection"
+  },
+  "loadingLanguages": {
+    "message": "Loading available languages…"
+  },
+  "statusChecking": {
+    "message": "Checking availability…"
+  },
+  "statusDownloadable": {
+    "message": "This language pair needs a one-time model download by Chrome. It starts when you translate."
+  },
+  "statusDownloading": {
+    "message": "Chrome is downloading the language model… $PCT$%",
+    "placeholders": {
+      "pct": {
+        "content": "$1"
+      }
+    }
+  },
+  "statusPreparing": {
+    "message": "Preparing the translation model…"
+  },
+  "statusTranslating": {
+    "message": "Translating…"
+  },
+  "statusDone": {
+    "message": "Translation completed"
+  },
+  "statusUnsupported": {
+    "message": "This browser does not support Chrome's built-in Translator API. Use a recent desktop version of Chrome (138 or later)."
+  },
+  "statusUnsupportedInPage": {
+    "message": "Translation is not available on this page. Try the extension popup instead."
+  },
+  "statusPairUnavailable": {
+    "message": "Chrome cannot translate between these languages. Choose a different pair."
+  },
+  "statusSameLanguage": {
+    "message": "The text is already in the target language."
+  },
+  "errorDetectFailed": {
+    "message": "Could not detect the language. Choose the source language manually."
+  },
+  "errorOffline": {
+    "message": "You appear to be offline. Chrome needs a connection to download this language model."
+  },
+  "errorNeedsGesture": {
+    "message": "Click Translate again to allow Chrome to download the model."
+  },
+  "errorDownload": {
+    "message": "The language model could not be downloaded. Check your connection and free disk space, then try again."
+  },
+  "errorTooLong": {
+    "message": "The text exceeds the $MAX$-character limit. Select or paste a shorter fragment.",
+    "placeholders": {
+      "max": {
+        "content": "$1"
+      }
+    }
+  },
+  "errorEmpty": {
+    "message": "Enter some text to translate."
+  },
+  "errorGeneric": {
+    "message": "Something went wrong while translating. Please try again."
+  },
+  "privacyNote": {
+    "message": "Text is translated on your device. Chrome may download AI language models on demand; your text is never sent with that download."
+  },
+  "themeToggleToLight": {
+    "message": "Switch to light theme"
+  },
+  "themeToggleToDark": {
+    "message": "Switch to dark theme"
+  }
+}

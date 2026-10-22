@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Local Translate banner</title>
+    <link rel="stylesheet" href="banner.css" />
+    <style>
+      .layout {
+        position: relative;
+        display: grid;
+        grid-template-columns: 520px 1fr;
+        height: 100%;
+        padding: 0 0 0 72px;
+        align-items: center;
+      }
+      .brand { display: flex; align-items: center; gap: 16px; margin-bottom: 26px; }
+      .brand img { width: 64px; height: 64px; filter: drop-shadow(0 10px 24px rgba(91, 91, 214, .5)); }
+      .brand span { font-size: 15px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #a5a6ff; }
+      h1 { margin: 0; font-size: 68px; line-height: 1; letter-spacing: -2px; font-weight: 750; }
+      h1 em {
+        font-style: normal;
+        background: linear-gradient(90deg, #a5a6ff, #c4a5ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      p { margin: 22px 0 30px; font-size: 22px; line-height: 1.45; color: #b6b8c9; max-width: 460px; }
+      .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+      .stage { position: relative; height: 100%; }
+      .page {
+        position: absolute;
+        top: 110px;
+        left: 24px;
+        width: 410px;
+        height: 440px;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, .12);
+        box-shadow: 0 40px 80px rgba(0, 0, 0, .55);
+        background: #fbf7f1 url(/images/floating-window.png) no-repeat;
+        background-size: 1088px auto;
+        background-position: -24px -446px;
+      }
+      .page::before {
+        content: '';
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 30px;
+        background: #22232d;
+        border-bottom: 1px solid rgba(255, 255, 255, .08);
+      }
+      .page::after {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 14px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #ff5f57;
+        box-shadow: 16px 0 #febc2e, 32px 0 #28c840;
+      }
+      .popup {
+        position: absolute;
+        left: 384px;
+        top: 150px;
+        width: 272px;
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, .14);
+        box-shadow: 0 30px 70px rgba(0, 0, 0, .6);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layout">
+      <div>
+        <div class="brand"><img src="/icons/icon-128.png" alt="" /><span>Chrome extension</span></div>
+        <h1>Local<br /><em>Translate</em></h1>
+        <p>Translate any text on the web without it ever leaving your device.</p>
+        <div class="chips">
+          <span class="chip">Built-in Chrome AI</span>
+          <span class="chip">No servers</span>
+          <span class="chip">No API keys</span>
+          <span class="chip">Open source</span>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="page"></div>
+        <img class="popup" src="/images/popup-dark.png" alt="" />
+      </div>
+    </div>
+    <script>
+      window.addEventListener('load', () => (document.documentElement.dataset.ready = 'true'));
+    </script>
+  </body>
+</html>

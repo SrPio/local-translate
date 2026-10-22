@@ -1,0 +1,20 @@
+<!doctype html>
+<html data-theme="dark" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Local Translate popup</title>
+    <script>
+      window.DEMO_INPUT = 'Nos vemos mañana en la estación a las nueve. No olvides traer los billetes y una chaqueta, que por la noche refresca.';
+      window.DEMO_TRANSLATIONS = {
+        [window.DEMO_INPUT]:
+          "See you tomorrow at the station at nine. Don't forget to bring the tickets and a jacket, it gets chilly at night.",
+      };
+    </script>
+    <script src="/demo/mock.js"></script>
+    <link rel="stylesheet" href="/app/popup.css" />
+    <script type="module" src="/app/popup.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Warum lokale KI im Browser ankommt — Byteweise</title>
+    <script>
+      window.DEMO_TRANSLATIONS = {
+        "Sprachmodelle direkt im Browser verändern, wie wir mit Texten umgehen. Statt jeden Absatz an einen Server zu schicken, läuft die Übersetzung auf dem eigenen Gerät – schneller, offline nutzbar und ohne dass Inhalte das Notebook verlassen.":
+          "Language models running directly in the browser are changing how we work with text. Instead of sending every paragraph to a server, translation runs on your own device: faster, usable offline and without content ever leaving the laptop.",
+      };
+    </script>
+    <script src="/demo/mock.js"></script>
+    <style>
+      :root { --bg: #0e1116; --panel: #151a22; --line: #222a36; --text: #e6e9ef; --muted: #8b95a7; --lime: #b6f36a; --blue: #6aa8ff; }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; }
+      header { display: flex; align-items: center; gap: 40px; padding: 18px 56px; border-bottom: 1px solid var(--line); }
+      .logo { font: 700 20px Consolas, 'Cascadia Code', monospace; letter-spacing: -0.5px; }
+      .logo span { color: var(--lime); }
+      nav { display: flex; gap: 24px; font-size: 14px; color: var(--muted); flex: 1; }
+      nav b { color: var(--text); font-weight: 600; }
+      .search { width: 220px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 8px; color: var(--muted); font-size: 13px; background: var(--panel); }
+      main { display: grid; grid-template-columns: 1fr 280px; gap: 56px; padding: 44px 56px; max-width: 1280px; }
+      .tags { display: flex; gap: 8px; margin-bottom: 16px; }
+      .tags span { padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; background: rgba(182,243,106,.12); color: var(--lime); }
+      .tags span + span { background: rgba(106,168,255,.12); color: var(--blue); }
+      h1 { font-size: 42px; line-height: 1.1; margin: 0 0 16px; letter-spacing: -1px; }
+      .meta { display: flex; align-items: center; gap: 12px; color: var(--muted); font-size: 14px; margin-bottom: 30px; }
+      .avatar { width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, var(--lime), var(--blue)); }
+      .meta b { color: var(--text); }
+      article p { font-size: 18px; line-height: 1.75; color: #cfd5df; margin: 0 0 22px; }
+      pre { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; font: 14px/1.6 Consolas, monospace; color: #cfd5df; }
+      .k { color: #ff8fa3; } .s { color: var(--lime); } .f { color: var(--blue); }
+      aside .box { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 20px; margin-bottom: 18px; }
+      aside h3 { margin: 0 0 14px; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+      aside li { list-style: none; margin-bottom: 14px; font-size: 14px; line-height: 1.45; }
+      aside ul { margin: 0; padding: 0; }
+      aside li small { display: block; color: var(--muted); margin-top: 2px; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">byte<span>weise</span>_</div>
+      <nav><b>Artikel</b><span>KI</span><span>Web</span><span>Hardware</span><span>Podcast</span></nav>
+      <div class="search">Suchen…</div>
+    </header>
+    <main>
+      <article>
+        <div class="tags"><span>KI</span><span>Browser</span></div>
+        <h1>Warum lokale KI jetzt im Browser ankommt</h1>
+        <div class="meta"><div class="avatar"></div><span><b>Jonas Albrecht</b> · 8 Min. Lesezeit · 14. Oktober</span></div>
+        <p id="target">Sprachmodelle direkt im Browser verändern, wie wir mit Texten umgehen. Statt jeden Absatz an einen Server zu schicken, läuft die Übersetzung auf dem eigenen Gerät – schneller, offline nutzbar und ohne dass Inhalte das Notebook verlassen.</p>
+        <p>Für Entwicklerinnen und Entwickler bedeutet das vor allem eines: weniger Infrastruktur. Kein API-Schlüssel, kein Backend, keine Kosten pro Anfrage.</p>
+        <pre><span class="k">const</span> translator = <span class="k">await</span> Translator.<span class="f">create</span>({
+  sourceLanguage: <span class="s">'de'</span>,
+  targetLanguage: <span class="s">'en'</span>,
+});</pre>
+      </article>
+      <aside>
+        <div class="box">
+          <h3>Meistgelesen</h3>
+          <ul>
+            <li>WebGPU im Alltag<small>12 Min. · Web</small></li>
+            <li>Die besten Mini-PCs 2026<small>9 Min. · Hardware</small></li>
+            <li>Rust im Frontend?<small>15 Min. · Web</small></li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+    <script type="module" src="/app/content.js"></script>
+  </body>
+</html>

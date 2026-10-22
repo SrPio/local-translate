@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Trois jours à Lisbonne — Carnets du Sud</title>
+    <script>
+      window.DEMO_TRANSLATIONS = {
+        "Le matin, la lumière glisse lentement sur les façades couvertes d'azulejos et le tram 28 grimpe en grinçant vers l'Alfama. On s'arrête pour un café serré au comptoir, puis on se perd volontairement dans les ruelles en escalier, là où le linge sèche entre deux balcons et où l'odeur des sardines grillées annonce déjà le déjeuner.":
+          "In the morning, the light slides slowly across the tile-covered façades and tram 28 creaks its way up towards Alfama. We stop for a strong coffee at the counter, then deliberately get lost in the stepped alleys, where laundry dries between two balconies and the smell of grilled sardines already announces lunch.",
+      };
+    </script>
+    <script src="/demo/mock.js"></script>
+    <style>
+      :root {
+        --ink: #1f2a2e;
+        --muted: #5f6b6f;
+        --paper: #fbf7f1;
+        --terracotta: #c8553d;
+        --ocean: #1d5c7a;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, 'Times New Roman', serif;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 56px;
+        border-bottom: 1px solid #e6ddd0;
+        font-family: 'Segoe UI', system-ui, sans-serif;
+      }
+      .logo { font-family: Georgia, serif; font-size: 26px; font-style: italic; letter-spacing: -0.5px; }
+      .logo b { color: var(--terracotta); font-style: normal; }
+      nav { display: flex; gap: 28px; font-size: 14px; color: var(--muted); }
+      nav span:first-child { color: var(--ink); font-weight: 600; }
+      .subscribe {
+        padding: 9px 18px; border-radius: 999px; background: var(--ink); color: #fff;
+        font-size: 13px; font-weight: 600;
+      }
+      .hero {
+        position: relative;
+        height: 190px;
+        margin: 0 56px;
+        margin-top: 28px;
+        border-radius: 18px;
+        overflow: hidden;
+        background: linear-gradient(180deg, #f6c995 0%, #f2a97e 45%, #e98a6b 70%, #b5626a 100%);
+      }
+      .hero svg { position: absolute; inset: auto 0 0 0; width: 100%; height: 100%; }
+      .hero .tag {
+        position: absolute; left: 28px; top: 24px; padding: 6px 12px; border-radius: 999px;
+        background: rgba(255,255,255,.85); font: 600 12px 'Segoe UI', sans-serif; letter-spacing: .08em;
+        text-transform: uppercase; color: var(--terracotta);
+      }
+      main { display: grid; grid-template-columns: 1fr 260px; gap: 56px; padding: 36px 56px 60px; }
+      .kicker { font: 600 12px 'Segoe UI', sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--ocean); }
+      h1 { font-size: 40px; line-height: 1.12; margin: 10px 0 14px; letter-spacing: -0.5px; }
+      .byline { font: 14px 'Segoe UI', sans-serif; color: var(--muted); margin-bottom: 26px; }
+      .byline b { color: var(--ink); }
+      article p { font-size: 18.5px; line-height: 1.7; margin: 0 0 20px; }
+      article p.lead::first-letter {
+        float: left; font-size: 64px; line-height: .9; padding: 6px 10px 0 0; color: var(--terracotta);
+      }
+      aside { font-family: 'Segoe UI', system-ui, sans-serif; }
+      .card { background: #fff; border: 1px solid #ece3d6; border-radius: 14px; padding: 18px; margin-bottom: 18px; }
+      .card h3 { margin: 0 0 12px; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+      .card li { list-style: none; margin: 0 0 12px; font-size: 14px; line-height: 1.4; }
+      .card ul { padding: 0; margin: 0; }
+      .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--terracotta); margin-right: 8px; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Carnets <b>du</b> Sud</div>
+      <nav><span>Destinations</span><span>Week-ends</span><span>Gastronomie</span><span>Carnets pratiques</span></nav>
+      <div class="subscribe">S'abonner</div>
+    </header>
+
+    <div class="hero">
+      <span class="tag">Portugal · Week-end</span>
+      <svg viewBox="0 0 1200 250" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <circle cx="930" cy="80" r="42" fill="#fff3d6" opacity=".9" />
+        <path d="M0 170 Q 150 120 300 150 T 600 140 T 900 150 T 1200 130 V250 H0Z" fill="#a9566a" opacity=".55" />
+        <g fill="#7b3f58">
+          <rect x="80" y="140" width="60" height="110" /><rect x="150" y="120" width="44" height="130" />
+          <rect x="205" y="150" width="70" height="100" /><rect x="290" y="110" width="36" height="140" />
+          <polygon points="290,110 308,84 326,110" /><rect x="340" y="140" width="80" height="110" />
+          <rect x="700" y="130" width="54" height="120" /><rect x="765" y="105" width="40" height="145" />
+          <polygon points="765,105 785,76 805,105" /><rect x="815" y="145" width="90" height="105" />
+          <rect x="920" y="125" width="50" height="125" /><rect x="985" y="150" width="70" height="100" />
+        </g>
+        <path d="M0 205 Q 300 180 600 200 T 1200 195 V250 H0Z" fill="#1d5c7a" />
+        <path d="M0 222 Q 300 205 600 220 T 1200 215 V250 H0Z" fill="#174a63" />
+        <g fill="#fbe7c6" opacity=".9">
+          <rect x="480" y="178" width="60" height="14" rx="4" /><rect x="494" y="170" width="30" height="10" rx="3" />
+        </g>
+      </svg>
+    </div>
+
+    <main>
+      <article>
+        <div class="kicker">Récit de voyage</div>
+        <h1>Trois jours à Lisbonne, entre azulejos et pastéis de nata</h1>
+        <div class="byline">Par <b>Camille Fournier</b> · 12 min de lecture · Mis à jour le 3 octobre</div>
+        <p class="lead">Lisbonne ne se visite pas, elle se laisse apprivoiser. Il faut accepter ses collines, ses pavés glissants et ce rythme tranquille qui transforme chaque promenade en petite aventure.</p>
+        <p id="target">Le matin, la lumière glisse lentement sur les façades couvertes d'azulejos et le tram 28 grimpe en grinçant vers l'Alfama. On s'arrête pour un café serré au comptoir, puis on se perd volontairement dans les ruelles en escalier, là où le linge sèche entre deux balcons et où l'odeur des sardines grillées annonce déjà le déjeuner.</p>
+        <p>L'après-midi, direction Belém pour goûter les célèbres pastéis encore tièdes, saupoudrés de cannelle. Au retour, le coucher de soleil depuis le miradouro de Santa Luzia vaut à lui seul le voyage.</p>
+        <p>Le soir venu, les fenêtres du Bairro Alto s'ouvrent sur des airs de fado et les conversations débordent sur les trottoirs.</p>
+      </article>
+      <aside>
+        <div class="card">
+          <h3>À ne pas manquer</h3>
+          <ul>
+            <li><span class="dot"></span>Le tram 28 tôt le matin</li>
+            <li><span class="dot"></span>Pastéis de Belém, file rapide avant 10 h</li>
+            <li><span class="dot"></span>Coucher de soleil à Santa Luzia</li>
+            <li><span class="dot"></span>Fado à l'Alfama</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Budget moyen</h3>
+          <ul><li>Hébergement · 95 € / nuit</li><li>Repas · 25 € / jour</li><li>Transports · 6,80 € / jour</li></ul>
+        </div>
+      </aside>
+    </main>
+    <script type="module" src="/app/content.js"></script>
+  </body>
+</html>
