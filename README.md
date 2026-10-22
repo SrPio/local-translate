@@ -47,9 +47,21 @@
 - Desktop Chrome 138 or later with the built-in Translator API available.
 - The first translation of a language pair may require Chrome to download the language model (internet connection and some disk space needed). Progress is shown while it downloads.
 
-## Install from source
+## Install
 
-You need Node.js 20+ and [pnpm](https://pnpm.io).
+No tools or accounts needed.
+
+1. **[Download `local-translate.zip`](https://github.com/SrPio/local-translate/releases/latest/download/local-translate.zip)** from the latest release and unzip it.
+2. Open `chrome://extensions` in Chrome.
+3. Turn on **Developer mode** (top-right corner).
+4. Click **Load unpacked** and select the unzipped `local-translate` folder.
+5. Optional: pin the extension from the puzzle-piece menu so its icon is always visible.
+
+To update, download the new release, replace the folder and click the reload icon on the extension card in `chrome://extensions`.
+
+## Build from source
+
+For development you need Node.js 20+ and [pnpm](https://pnpm.io).
 
 ```bash
 pnpm install
