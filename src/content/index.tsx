@@ -66,12 +66,14 @@ function start(): void {
     { capture: true },
   );
 
-  // Keyboard shortcut relayed by the service worker.
-  chrome.runtime.onMessage.addListener((message: unknown, sender) => {
+  // Keyboard shortcut relayed by the service worker; selection lookups from the popup.
+  chrome.runtime.onMessage.addListener((message: unknown, sender, sendResponse) => {
     if (sender.id !== chrome.runtime.id || !isExtensionMessage(message)) return;
     if (message.type === 'translate-selection') {
       const selection = readSelection(host);
       if (selection) store.openWith(selection);
+    } else if (message.type === 'get-selection') {
+      sendResponse(readSelection(host)?.text ?? null);
     }
   });
 

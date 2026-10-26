@@ -72,6 +72,32 @@ describe('Popup', () => {
     expect(await screen.findByText('[en] [es] Hi')).toBeInTheDocument();
   });
 
+  it('prefills the input with the selection from the active tab', async () => {
+    installTranslatorMock();
+    const sendMessage = vi.fn(async () => 'Selected text');
+    Object.assign(chrome, {
+      tabs: { query: vi.fn(async () => [{ id: 7 }]), sendMessage },
+    });
+    await renderPopup();
+    await waitFor(() => expect(screen.getByLabelText('inputLabel')).toHaveValue('Selected text'));
+    expect(sendMessage).toHaveBeenCalledWith(7, { type: 'get-selection' });
+  });
+
+  it('starts empty when the page cannot be reached', async () => {
+    installTranslatorMock();
+    Object.assign(chrome, {
+      tabs: {
+        query: vi.fn(async () => [{ id: 7 }]),
+        sendMessage: vi.fn(async () => {
+          throw new Error('Receiving end does not exist');
+        }),
+      },
+    });
+    await renderPopup();
+    await waitFor(() => expect(screen.getByRole('button', { name: 'translate' })).toBeEnabled());
+    expect(screen.getByLabelText('inputLabel')).toHaveValue('');
+  });
+
   it('only lists languages the engine supports', async () => {
     installTranslatorMock({ languages: ['en', 'es', 'ja'] });
     await renderPopup();

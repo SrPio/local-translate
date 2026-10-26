@@ -48,6 +48,7 @@ describe('preferences', () => {
 describe('isExtensionMessage', () => {
   it('accepts only known message shapes', () => {
     expect(isExtensionMessage({ type: 'translate-selection' })).toBe(true);
+    expect(isExtensionMessage({ type: 'get-selection' })).toBe(true);
     expect(isExtensionMessage({ type: 'translate-selection', text: 'x' })).toBe(false);
     expect(isExtensionMessage({ type: 'other' })).toBe(false);
     expect(isExtensionMessage('translate-selection')).toBe(false);

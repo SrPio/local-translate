@@ -14,6 +14,7 @@ import { getTranslationService } from '../services/translation/translation-servi
 import type { LanguagePair } from '../services/translation/types';
 import { AUTO_DETECT, MAX_CHARS } from '../shared/constants';
 import { t, uiLocale } from '../shared/i18n';
+import { requestActiveSelection } from '../shared/messages';
 import { isBusy, statusView, type StatusView } from '../shared/status';
 
 const locale = uiLocale();
@@ -31,6 +32,17 @@ export function Popup() {
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
   }, [theme]);
+
+  // Prefill with the page selection; never overwrite text typed in the meantime.
+  useEffect(() => {
+    let active = true;
+    void requestActiveSelection().then((selection) => {
+      if (active && selection) setText((current) => current || selection);
+    });
+    return () => {
+      active = false;
+    };
+  }, []);
 
   const ready = languages.status === 'ready';
   const languageList = ready ? languages.languages : [];
