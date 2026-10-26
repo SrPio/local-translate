@@ -1,6 +1,6 @@
 {
   "name": "local-translate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Private, on-device translation for Chrome using the built-in Translator API.",
   "license": "MIT",
   "repository": {
